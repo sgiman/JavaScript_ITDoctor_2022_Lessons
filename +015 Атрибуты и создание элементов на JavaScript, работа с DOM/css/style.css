@@ -1,0 +1,197 @@
+/***********************************************************************************************************************
+ * style.css
+ * ---------------------------------------------------------------------------------------------------------------------
+ * PhpStorm 2023.1
+ * HTML, CSS, JavaScript
+ * ---------------------------------------------------------------------------------------------------------------------
+ * Уроки по JavaScript - ITDoctor (2022)
+ *
+ * Курс JavaScript с нуля состоит из 12 уроков. В этом курсе вы узнаете основы языка программирования, 
+ * без которых невозможно изучать библиотеки, фреймворки или создавать свои собственные интересные скрипты. 
+ * За 12 уроков вы научитесь работать с переменными разных типов, массивами, объектами, 
+ * узнаете как проверять условия и создавать циклы. Научитесь создавать свои собственные функции, 
+ * работать с датой и временем, правильно документировать код и отлавливать ошибки. 
+ *
+ * Так же рассказывается про объектно-ориентированный подход в программирования на языке JavaScript и 
+ * рассматриваются интересные возможности стандарта ECMAScript 2015 (ES6), 
+ * который уже максимально хорошо поддерживается всеми браузерами и не требует дополнительной компиляции 
+ * в более старые версии стандарта ES. Данный курс имеет свое логическое продолжение в виде курса "Супер JavaScript". 
+ * Узнать подробнее о курсе "Супер JavaScript" можно будет после завершения данного курса. *
+ *
+ * https://www.youtube.com/playlist?list=PLuY6eeDuleINoCQtGZsMoVVCSgEH7gKQ5
+ *
+ ***********************************************************************************************************************
+ * Writing & Modification by sgiman (SCS) @ 2023-09
+ */
+
+ /*
+  * DOM - Document Object Model
+  */
+
+/* C O M M O N */
+
+* {
+    box-sizing: border-box;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: Calibri;
+}
+
+html  {
+    background-color: #fbf5eb;
+    font-family: Roboto, sans-serif;
+}
+
+/* body {background-color: #fbf5eb;} */
+body {
+    /* text-align: center; */
+    font-size: 24px;
+    /* font-family: Roboto, sans-serif; */
+}
+
+/* for tag h1,h2,h3 */
+h1 {color: red;}
+h2 {color: blue;}
+h3 {color: darkgreen; }
+
+#header_1 {color: brown;}                                   /* for id1 */
+#header_2 {color: green;}                                   /* for id2 */
+
+h3.style {color: chocolate;}                                /* class - only for h3 */
+
+p.style {background-color: darkred; color: #fbf5eb}         /* class - only for p */
+
+p i {
+    color: blueviolet;
+    size: 24px;
+    font-family: Impact, sans-serif;
+}
+
+p.example,b {
+    font-size: 30px;
+    font-weight: normal
+}
+
+p.simple-text {
+    font-size: 24px;
+    font-family: Roboto, sans-serif;
+}
+
+div.dform {
+    padding: 20px;
+    margin: 10px;
+    /* left: 45%; */
+    /* position: absolute; */
+}
+
+div.center {
+    text-align: center;
+}
+
+/************************************************************************************
+  BUTTON
+  https://www.freecodecamp.org/news/css-button-style-hover-color-and-background/
+************************************************************************************/
+.button {
+    /*position: absolute;
+    top:50%;*/
+    background-color:#0a0a23;
+    color: #fff;
+    border:none;
+    border-radius:10px;
+    padding:15px;
+    min-height:30px;
+    min-width: 120px;
+    font-family: Roboto, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.button:active {
+    background-color: #ffbf00;
+}
+
+/***********************************************************************************/
+/* S G I M A N */
+.logo img {
+    width: 100px;
+}
+.container {
+    width: 1170px;
+    margin: 0 auto; /* выровнять по центру с одинаковыми отступами слева-справа */
+}
+.tred {
+    color: red;
+}
+.tblue {
+    color: blue;
+}
+.tgreen {
+    color: green;
+}
+/***********************************************************************************/
+/* IT D o c t o r */
+.menu_link {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    background: #8dc5e8;
+    transition: 0.5s;
+}
+.menu_link:hover {
+    opacity: 0.8;
+}
+.alert {
+    padding: 5px 15px;
+    border-radius: 4px;
+    color: #2e9626;
+    background-color: #bedd8d;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.item {
+    background-color: #c8c8c8;
+    margin-bottom: 10px;
+    padding: 15px;
+    font-size: 18px;
+    border-radius: 10px;
+}
+
+.timer-progresbar {
+    display: flex;
+}
+.timer-progresbar__fill {
+    color: springgreen;
+}
+.timer-progresbar__empty {
+    color: tomato;
+}
+
+.table {
+    border-collapse: collapse;
+}
+td,th {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+    font-size: 18px;
+}
+th {
+    font-weight: bold;
+    background-color: #fff6ce;
+}
+h4 {
+    text-transform: uppercase;
+}
+#clock {
+    font-size: 50px;
+    font-family: monospace;
+    font-weight: bold;
+}
+/***********************************************************************************/
+
+
+
+

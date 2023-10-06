@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Тестовая страница">
+    <title>JavaScript</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<h1 style="color:red; margin:0 auto;">013 Работа с DOM деревом на JavaScript, изменение текста и стилей на JS</h1><hr>
+
+<div id="element">Элемент</div>
+<ul>
+    <li>Пункт 1</li>
+    <li>Пункт 2</li>
+</ul>
+<ul>
+    <li>Пункт 3</li>
+    <li>Пункт 4</li>
+</ul>
+<ul>
+    <li>Пункт 5</li>
+    <li>Пункт 6</li>
+</ul>
+<ul>
+    <li>Пункт 7</li>
+    <li>Пункт 8</li>
+</ul>
+
+<a target="_blank" href="http://google.com.ua">google.com.ua</a><br>
+<a target="_blank" href="http://youtube.com">youtube.com</a><br>
+<a target="_blank" href="http://vimeo.com">vimeo.com</a><br>
+<a target="_blank" href="http://github.com">github.com</a><br>
+<a target="_blank" href="http://linkedin.com">linkedin.com</a><br>
+
+<a target="_blank" href="https://olx.ua">olx.ua</a><br>
+<a target="_blank" href="https://prom.ua">prom.ua</a><br>
+<a target="_blank" href="https://tsn.ua">tsn.ua</a><br>
+<a target="_blank" href="https://rbc.ua">rbc.ua</a><br>
+
+<h2>ЗАГОЛОВОК</h2>
+<div id="content">
+    <ul class="list">
+        <li class="item">Тест 1</li>
+        <li class="item">Тест 2</li>
+    </ul>
+</div>
+
+<!--<script src="js/main.js"></script>-->
+<!--------------------------------------------------------------------------------------------------------->
+<script>
+    /*
+     * getElementById еtс. - устарели
+     * querySelectorAll и querySelector - новые
+     */
+
+    /*
+    // --- getElementById ---
+    let element_1 = document.getElementById("element")  // <div id="element">Элемент</div>
+    element_1.style.background = 'tomato'
+    element_1.style.color = "white"
+    element_1.style.padding = "10px"
+    element_1.style.fontWeight = 'bold'
+    element_1.style.textTransform = 'uppercase'
+    */
+
+    /*
+    //--- querySelectorAll, querySelector ---
+    let elements = document.querySelectorAll('ul > li:first-child') // все первые элементы из списков ul
+    // Цикл по всем элементам
+    for(let element of elements) {
+        element.style.color = 'red'
+        element.style.fontWeight = 'bold'
+        element.innerHTML = 'Новое значение'
+    }
+    */
+
+    let element = document.querySelector('ul > li') //  найти только один первый элемент
+    element.innerHTML = "<a href='#'>Ссылка</a>"
+
+    for (let element of document.querySelectorAll('a[href$=".com"]')) {
+        element.innerHTML = "Сайт в зоне .com"
+    }
+
+    // -- matches --
+    for (let element of document.body.children) {
+        if (element.matches('a[href$=".ua"')) {
+            element.innerHTML = "Сайт в зоне .ua"
+        }
+    }
+
+    // --- class ---
+    let item = document.querySelector('.item')  // выбор последнего элемента
+    //console.log(item.closest('.list'))        // выбор родителя по классу
+    console.log(item.closest('#content'))       // выбор родителя по id
+
+    /*
+    if (item.closest('h2')!=null) { // если есть родитель
+        //...
+    }
+    */
+
+
+</script>
+<!--------------------------------------------------------------------------------------------------------->
+
+</body>
+</html>

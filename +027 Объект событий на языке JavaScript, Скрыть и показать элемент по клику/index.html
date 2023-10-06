@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Тестовая страница">
+    <title>JavaScript</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="wrapper">
+
+<h1>027 Объект событий на языке JavaScript, Скрыть и показать элемент по клику</h1><hr>
+
+<!-- 1 -->
+<button class="button btn">Кнопка</button>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+
+<!-- 2 -->
+<div class="item">
+    <div class="item-title">
+        <h3>Пётр Иванович</h3>
+    </div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Accusamus debitis dignissimos distinctio eligendi hic minima,
+        officia quam quas vero vitae? At autem blanditiis
+        dicta eius minus nam obcaecati odit vitae.</p>
+</div>
+<div class="item">
+    <div class="item-title">
+        <h3>Кирил Сергеевич</h3>
+    </div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Accusamus debitis dignissimos distinctio eligendi hic minima,
+        officia quam quas vero vitae? At autem blanditiis
+        dicta eius minus nam obcaecati odit vitae.</p>
+</div>
+<div class="item">
+    <div class="item-title">
+        <h3>Андрей Петрович</h3>
+    </div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Accusamus debitis dignissimos distinctio eligendi hic minima,
+        officia quam quas vero vitae? At autem blanditiis
+        dicta eius minus nam obcaecati odit vitae.</p>
+</div>
+
+</div> <!-- class="wrapper" -->
+
+<!--<script src="js/main.js"></script>-->
+
+<!--------------------------------------------------------------------------------------------------------->
+<script>
+
+    //--- 1 ---
+    document.querySelector('.btn').onclick = function (event) {
+        console.log(event.type)             // 'click'
+        console.log(event.currentTarget)    // '<button class="button btn">Кнопка</button>'
+        console.log(this)                   // '<button class="button btn">Кнопка</button>'
+        console.log(event.clientX)          // X-coordinate
+        console.log(event.clientY)          // Y-coordinate
+        document.querySelector('p').hidden = !document.querySelector('p').hidden
+    }
+
+    //--- 2 ---
+    let items = document.querySelectorAll('.item')  // найденные все элементы
+
+    for (let item of items) {
+        item.querySelector('.item-title').insertAdjacentHTML("beforeend",
+            '<button class="close">&times;</button>')   // добавить крестик для закрытия после .item-title
+        item.querySelector('.close').onclick = () => item.remove()  // "click" для удаления карточки
+    }
+
+</script>
+<!--------------------------------------------------------------------------------------------------------->
+
+</body>
+</html>

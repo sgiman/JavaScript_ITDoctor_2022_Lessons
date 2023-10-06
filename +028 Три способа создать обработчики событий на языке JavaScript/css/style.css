@@ -1,0 +1,119 @@
+/***********************************************************************************************************************
+ * style.css
+ * ---------------------------------------------------------------------------------------------------------------------
+ * PhpStorm 2023.1
+ * HTML, CSS, JavaScript
+ * ---------------------------------------------------------------------------------------------------------------------
+ * Уроки по JavaScript - ITDoctor (2022)
+ *
+ * Курс JavaScript с нуля состоит из 12 уроков. В этом курсе вы узнаете основы языка программирования, 
+ * без которых невозможно изучать библиотеки, фреймворки или создавать свои собственные интересные скрипты. 
+ * За 12 уроков вы научитесь работать с переменными разных типов, массивами, объектами, 
+ * узнаете как проверять условия и создавать циклы. Научитесь создавать свои собственные функции, 
+ * работать с датой и временем, правильно документировать код и отлавливать ошибки. 
+ *
+ * Так же рассказывается про объектно-ориентированный подход в программирования на языке JavaScript и 
+ * рассматриваются интересные возможности стандарта ECMAScript 2015 (ES6), 
+ * который уже максимально хорошо поддерживается всеми браузерами и не требует дополнительной компиляции 
+ * в более старые версии стандарта ES. Данный курс имеет свое логическое продолжение в виде курса "Супер JavaScript". 
+ * Узнать подробнее о курсе "Супер JavaScript" можно будет после завершения данного курса. *
+ *
+ * https://www.youtube.com/playlist?list=PLuY6eeDuleINoCQtGZsMoVVCSgEH7gKQ5
+ *
+ ***********************************************************************************************************************
+ * Writing & Modification by sgiman (SCS) @ 2023-09
+ */
+
+ /*
+  * DOM - Document Object Model
+  */
+
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html  {
+    background-color: #fbf5eb;
+    font-family: Roboto, sans-serif;
+}
+
+/* body {background-color: #fbf5eb;} */
+body {
+    /* text-align: center; */
+    font-size: 20px;
+    font-family: Roboto, sans-serif;
+}
+
+/* for tag h1,h2,h3 */
+h1 {color: red;}
+h2 {color: blue;}
+h3 {color: darkgreen; }
+
+#header_1 {color: brown;}                                   /* for id1 */
+#header_2 {color: green;}                                   /* for id2 */
+
+h3.style {color: chocolate;}                                /* class - only for h3 */
+
+p.style {background-color: darkred; color: #fbf5eb}         /* class - only for p */
+
+p i {
+    color: blueviolet;
+    size: 24px;
+    font-family: Impact, sans-serif;
+}
+
+p.example,b {
+    font-size: 30px;
+    font-weight: normal
+}
+
+p.simple-text {
+    font-size: 24px;
+    font-family: Roboto, sans-serif;
+}
+
+div.dform {
+    padding: 20px;
+    margin: 10px;
+    /* left: 45%; */
+    /* position: absolute; */
+}
+
+div.center {
+    text-align: center;
+}
+
+/************************************************************************************
+  BUTTON
+  https://www.freecodecamp.org/news/css-button-style-hover-color-and-background/
+************************************************************************************/
+.button {
+    /*position: absolute;
+    top:50%;*/
+    background-color:#0a0a23;
+    color: #fff;
+    border:none;
+    border-radius:10px;
+    padding:15px;
+    min-height:30px;
+    min-width: 120px;
+    font-family: Roboto, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.button:active {
+    background-color: #ffbf00;
+}
+
+/***********************************************************************************/
+.logo img {
+    width: 100px;
+}
+
+.container {
+    width: 1170px;
+    margin: 0 auto; /* выровнять по центру с одинаковыми отступами слева-справа */
+}

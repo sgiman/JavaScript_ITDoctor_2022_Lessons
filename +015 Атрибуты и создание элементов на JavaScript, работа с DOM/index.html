@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Тестовая страница">
+    <title>JavaScript</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<h1>015 Атрибуты и создание элементов на JavaScript, работа с DOM</h1><hr>
+
+<!--
+<ul class="list">
+    <li class="item">Пункт 1</li>
+    <li class="item">Пункт 2</li>
+</ul>
+
+<div>Текст в блоке DIV</div>
+<h3>Заголовок H3</h3>
+
+<p title="Подсказка" class="tblue text">Aбзац текста</p>
+
+<p data-about="Это текст">Абзац текста</p>
+<div data-about-block="Это блок">Блок текста</div>
+-->
+
+<P>Разделитель</P>
+<hr>
+
+<!--<script src="js/main.js"></script>-->
+<!--------------------------------------------------------------------------------------------------------->
+<script>
+    //--- 1 (contains) ---
+    /*
+    let list = document.querySelector('.list')
+    let item = document.querySelector('.item')
+    console.log(list.contains(item))    // true
+    console.log(item.contains(list))    // false
+    */
+
+    //--- 2 (innerHTML) ---
+    /*
+    let strs = ["Элемент 1", "Элемент 2", "Элемент 3"]
+    // Шаблон (обратные двойные кавычки)
+    document.body.innerHTML = `
+        <ol>
+        <li>${strs[0]}</li>
+        <li>${strs[1]}</li>
+        <li>${strs[2]}</li>
+    </ol>`
+    console.log(document.querySelector('body').innerHTML)
+    */
+
+    //--- 3 (textContent - без тегов) --0
+    /*
+    let strs = ["Фамилия", "Имя", "Отчество"]
+    document.querySelector('p').textContent = `${strs[0]} - ${strs[1]} - ${strs[2]}`
+    console.log(document.querySelector('div').textContent)
+    */
+
+    //--- 4 (hidden) ---
+    /*
+    let elem = document.querySelector('p')
+    // elem.hidden = true  // скрыть
+    setInterval(() => elem.hidden = !elem.hidden, 1000)
+    */
+
+    //--- 5 (hasAttributes, getAttributes, setAttribute) ---
+    /*
+    let elem = document.querySelector('p')
+    console.log(elem.hasAttributes("title"))
+    console.log(elem.getAttribute("title"))
+
+    elem.setAttribute("class", "new_text")
+    elem.setAttribute("id", "new_id")
+    console.log(elem.getAttribute("title"))
+
+    for(let attr of elem.attributes) {
+        console.log("АТР: " + `${attr.name} = ${attr.value}`)
+    }
+    elem.removeAttribute("title")
+    for(let attr of elem.attributes) {
+        console.log("УДАЛЕНИЕ АТР: " + `${attr.name} = ${attr.value}`)
+    }
+    console.dir(elem)   // ввести все свойства
+    */
+    //--- 6 (dataset) ----
+    /*
+    let elem1 = document.querySelector('p')
+    console.log(elem1.dataset.about)            // data-about="Это текст"
+    let elem2 = document.querySelector('div')
+    console.log(elem1.dataset.aboutBlock)       // Camel style (data-about-block="Это блок")
+    */
+
+    //--- 7 (createElement, append, preppend) ---
+    let div = document.createElement('div')
+    div.className = "alert"
+    div.innerHTML = 'Cообщение (innerHTML)!'
+    //div.innerHTML = '<p>Важное сообщение!</p>'
+    //document.body.append(div)     // добавить в самый конец
+    //document.body.prepend(div)    // добавить в начало
+    //document.body.before(div)     // добавить до
+    //document.body.after(div)      // добавить после
+
+    //--- 8 (replaceWith) ---
+    //document.querySelector('hr').after(div)
+    document.querySelector('hr').before(div)
+    let p = document.createElement('p')         // 1. Создать элемент
+    p.textContent = "Важное сообщение 2 (append)!!!"    // 2. Контент для элемента
+    //div.append(p, document.createElement('hr')) // 3. Добавить на страницу
+    div.append("Важное сообщение 3 !!!", document.createElement('hr')) // 3. Добавить на страницу
+    p.textContent = "Важное сообщение (replace)!"
+    div.replaceWith(p)  // Заменить
+
+</script>
+<!--------------------------------------------------------------------------------------------------------->
+
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Тестовая страница">
+    <title>JavaScript</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<h1>028 Три способа создать обработчики событий на языке JavaScript</h1><hr>
+
+<!-- 1 -->
+<input class="button" type="button" value="Кнопка 1" onclick="alert('HTML: Клик! - ' + this.value)">
+<button class="button btn">Кнопка 2</button>
+<input class="button" type="button" value="Кнопка 3" onclick="addText()">
+<button class="button btn2">Кнопка 4</button>
+<hr>
+
+<!-- 2 -->
+<button class="button btn3">Кнопка 5</button>
+
+
+<!--<script src="js/main.js"></script>-->
+<!--------------------------------------------------------------------------------------------------------->
+<script>
+    /*
+     * ----------------------------------------------------------------------------------------------------
+     * СОБЫТИЯ МЫШИ:
+     * ----------------------------------------------------------------------------------------------------
+     * click - при нажатии левой кнопки мыши (на сенсорных - касание)
+     * contextmenu - при нажатии правой кнопки мыши
+     * mouseover - когда мышь наводится на что-то / или покидает объект
+     * mousedown - когда нажали / отжали кнопку мыши
+     * mousemove - при движении мыши
+     *
+     * ----------------------------------------------------------------------------------------------------
+     * СОБЫТИЯ НА ЭЛЕМЕНТАХ УПРАВЛЕНИЯ
+     * ----------------------------------------------------------------------------------------------------
+     * submit - пользователь отправил форму
+     * focus - пользователь фокусируется на элементе
+     *
+     * ----------------------------------------------------------------------------------------------------
+     * КЛАВИАТУРНЫЕ СОБЫТИИЯ
+     * ----------------------------------------------------------------------------------------------------
+     * keydown / keyup - когда пользователь нажимает / отпускакт кнопку
+     *
+     * ----------------------------------------------------------------------------------------------------
+     * СОБЫТИЯ ДОКУМЕНТА
+     * ----------------------------------------------------------------------------------------------------
+     * DOMContentLoaded - когда HTML загружен и обработан: DOM документ полностью построен и доступен
+     *
+     */
+
+    // --- 1 ---
+    // С одним событием
+    // Selector (Кнопка 1)
+    document.querySelector('.btn').onclick = function () {
+        alert('Клик! - JS1')
+        console.log('Клик в консоль')
+    }
+    // Selector with this (Кнопка 2)
+    document.querySelector('.btn').onclick = function () {
+        alert(this.innerHTML + '- JS2')
+    }
+    // Function (Кнопка 3)
+    function addText () {
+        alert("Add Text")
+    }
+    // Selector with link for function (Кнопка 4)
+    document.querySelector('.btn2').onclick = addText
+
+    // --- 2 ---
+    // С множеством событий (в одном элементе)
+    function addText1 () {
+        alert("Первый текст")
+    }
+    function addText2 () {
+        alert("Второй текст")
+    }
+    function addText3 () {
+        alert("Третий текст")
+    }
+    // Несколько обработчиков событий на один элемент
+    //document.querySelector('.btn3').onclick = addText1
+    document.querySelector('.btn3').addEventListener('click', addText1)
+    document.querySelector('.btn3').addEventListener('click', addText2)
+    document.querySelector('.btn3').addEventListener('click', addText3)
+
+    // Удалить обработчик событий - только для именованных функций (не для анонимных функций)
+    document.querySelector('.btn3').removeEventListener('click', addText1)
+
+
+
+</script>
+<!--------------------------------------------------------------------------------------------------------->
+
+</body>
+</html>
