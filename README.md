@@ -16,7 +16,7 @@ You can learn more about the Super JavaScript course after completing this cours
 
 https://www.youtube.com/playlist?list=PLuY6eeDuleINoCQtGZsMoVVCSgEH7gKQ5
 
+![javascript](https://github.com/sgiman/JavaScript_ITDoctor_2022/assets/7030369/bfdb6338-4fe3-47e3-82e7-be8f8ad916d6)
 
-![javascript](https://github.com/sgiman/JavaScript_ITDoctor_2022/assets/7030369/cbe2d3db-69e6-4154-a76f-f10f90a71434)
 
 **Sgiman @ 2023**
