@@ -39,11 +39,11 @@ console.log("Text\n on 2 line" + a)
 
 //--- MATH ---
 console.log("\nMATH:")
-console.log (Math.random())                   // 0...1
+console.log (Math.random())             // 0...1
 console.log (Math.max(3,4,1,0,2,7,2))
 console.log (Math.pow(2,5))             // 2 в степени 5
 console.log (Math.pow(16,0.5))          // кв. корень из 16
-console.log (Math.sqrt(64))                // кв. корень
+console.log (Math.sqrt(64))             // кв. корень
 
 console.log (Math.floor(3.2))   // округление в меньшую сторону (3)
 console.log (Math.floor(3.9))   // округление в меньшую сторону (3)
