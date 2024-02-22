@@ -75,7 +75,7 @@ console.log(arr)
 // "Стек" (push - pop)
 // ПОСЛЕДНИМ ЗАШЁЛ - ПЕРВЫМ ВЫШЕЛ
 console.log(arr.pop())      // последнее значение
-arr.unshift(6)        // длбавить в начало
+arr.unshift(6)        // дoбавить в начало
 
 //--- 3 ---
 console.log("concat:")
